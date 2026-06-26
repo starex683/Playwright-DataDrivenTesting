@@ -1,6 +1,6 @@
 # Playwright TypeScript Page Object Model (POM) - DemoQA
 
-A robust UI automation framework built using **Playwright**, **TypeScript**, and the **Page Object Model (POM)** design pattern. This framework automates the DemoQA Student Registration Form and demonstrates Data-Driven Testing (DDT), reusable fixtures, hooks, utilities, and a scalable project architecture.
+A robust UI automation framework built using **Playwright**, **TypeScript**, and the **Page Object Model (POM)** design pattern. This framework automates the DemoQA Student Registration Form and demonstrates **Data-Driven Testing (DDT)**, reusable fixtures, hooks, utilities, and a scalable project architecture.
 
 ---
 
@@ -11,7 +11,7 @@ A robust UI automation framework built using **Playwright**, **TypeScript**, and
 * Data-Driven Testing (JSON)
 * Custom Playwright Fixtures
 * Reusable Base Page
-* Before/After Hooks
+* Before & After Hooks
 * File Upload Automation
 * Cross-browser Testing
 * HTML Reports
@@ -85,54 +85,107 @@ The **pages** folder contains all Page Object classes.
 
 The Base Page contains reusable methods shared across all page objects.
 
+**Responsibilities**
+
+* Navigate to web pages
+* Click elements
+* Fill input fields
+* Scroll elements into view
+* Explicit waits
+* Common reusable helper methods
 
 ### StudentFormPage.ts
 
-Contains all locators and actions related to the DemoQA Student Registration Form.
+Contains all locators and reusable methods related to the DemoQA Student Registration Form.
 
-## utils
+**Responsibilities**
 
-Reusable utility classes.
+* Enter student details
+* Select gender
+* Select date of birth
+* Select subjects
+* Select hobbies
+* Upload picture
+* Select state and city
+* Submit the registration form
+* Verify successful registration
 
-Example:
+---
 
-* File upload helper
+## Fixtures
+
+The **fixtures** folder contains reusable Playwright fixtures.
+
+**Responsibilities**
+
+* Browser setup
+* Page Object initialization
+* Shared test objects
+* Reusable test context
+
+---
+
+## Hooks
+
+The **hooks** folder contains reusable Playwright hooks.
+
+**Responsibilities**
+
+* Before Each
+* After Each
+* Test cleanup
+* Logging
+* Screenshot on failure (optional)
+
+---
+
+## Utils
+
+The **utils** folder contains reusable utility classes.
+
+Examples:
+
+* Constants
+* Wait Utilities
 * Common helper methods
+
+---
+
+## Test Data
+
+The **test-data** folder stores reusable test data.
+
+### Student.ts
+
+TypeScript interface representing the student data model.
+
+### students.json
+
+Contains multiple student records used for Data-Driven Testing.
 
 ---
 
 # Installation
 
-Tp push code to GIT:
-git init
-git status
-git add .
-git commit -m "Initial commit - Playwright TypeScript POM DemoQA Framework"
-create repository
-git remote add origin URL
-git branch -M main
-git push -u origin main
-
-
-Clone the repository
+## Clone the Repository
 
 ```bash
 git clone <repository-url>
 ```
 
-Navigate to the project
+Navigate to the project folder.
 
 ```bash
-cd Playwright-DemoQA-POM
+cd Playwright-DataDrivenTesting
 ```
 
-Install dependencies
+Install project dependencies.
 
 ```bash
 npm install
 ```
 
-Install Playwright browsers
+Install Playwright browsers.
 
 ```bash
 npx playwright install
@@ -140,45 +193,93 @@ npx playwright install
 
 ---
 
+# Push Project to GitHub
+
+Initialize Git.
+
+```bash
+git init
+```
+
+Check the repository status.
+
+```bash
+git status
+```
+
+Stage all project files.
+
+```bash
+git add .
+```
+
+Commit the changes.
+
+```bash
+git commit -m "Initial commit - Playwright TypeScript POM DemoQA Framework"
+```
+
+Create a new repository on GitHub.
+
+Add the remote repository.
+
+```bash
+git remote add origin <repository-url>
+```
+
+Rename the default branch.
+
+```bash
+git branch -M main
+```
+
+Push the project.
+
+```bash
+git push -u origin main
+```
+
+---
+
 # Run Tests
 
-Run all tests
+Run all tests.
 
 ```bash
 npx playwright test
 ```
 
-Run Smoke tests
+Run Smoke tests.
 
 ```bash
 npx playwright test --grep @smoke
 ```
 
-Run Sanity tests
+Run Sanity tests.
 
 ```bash
 npx playwright test --grep @sanity
 ```
 
-Run Regression tests
+Run Regression tests.
 
 ```bash
 npx playwright test --grep @regression
 ```
 
-Run in headed mode
+Run tests in headed mode.
 
 ```bash
 npx playwright test --headed
 ```
 
-Run on Chromium
+Run tests on Chromium.
 
 ```bash
 npx playwright test --project=chromium
 ```
 
-Run a single test
+Run a single test.
 
 ```bash
 npx playwright test tests/StudentForm.spec.ts
@@ -188,18 +289,18 @@ npx playwright test tests/StudentForm.spec.ts
 
 # Reports
 
-Generate Playwright HTML Report
+Generate the Playwright HTML Report.
 
 ```bash
 npx playwright show-report
 ```
 
-Reports generated:
+The framework generates:
 
 * HTML Report
-* Screenshots
-* Videos
-* Trace files
+* Screenshots on Failure
+* Video Recordings
+* Trace Files
 
 ---
 
@@ -207,13 +308,13 @@ Reports generated:
 
 This framework follows the **Page Object Model (POM)** design pattern.
 
-Benefits:
+## Benefits
 
 * Improved code reusability
 * Better maintainability
 * Easier debugging
 * Reduced code duplication
-* Separation of test logic and page logic
+* Separation of page logic and test logic
 
 ---
 
@@ -225,13 +326,13 @@ Test data is maintained in:
 test-data/students.json
 ```
 
-Each student record is executed independently, improving scalability and test coverage.
+Each student record is executed independently, improving scalability, maintainability, and test coverage.
 
 ---
 
 # CI/CD Ready
 
-The framework is compatible with:
+The framework can be integrated with:
 
 * GitHub Actions
 * Azure DevOps
@@ -244,6 +345,6 @@ The framework is compatible with:
 
 **Akhil Gandikota**
 
-QA Automation Engineer
+**QA Automation Engineer**
 
-**Framework:** Playwright + TypeScript + Page Object Model + Data-Driven Testing
+**Framework:** Playwright + TypeScript + Page Object Model (POM) + Data-Driven Testing (DDT)
