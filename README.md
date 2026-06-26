@@ -63,9 +63,6 @@ Playwright-DataDrivenTesting
 │   └── sample.png
 │
 ├── utils
-│   ├── FileUpload.ts
-│   ├── DatePicker.ts
-│   ├── Dropdown.ts
 │   ├── Constants.ts
 │   └── WaitUtils.ts
 │
