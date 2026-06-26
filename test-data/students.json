@@ -1,0 +1,66 @@
+[
+    {
+        "firstName": "Akhil",
+        "lastName": "Gandikota",
+        "email": "akhil.gandikota@test.com",
+        "gender": "Male",
+        "mobile": "9876543210",
+        "day": "15",
+        "month": "May",
+        "year": "1997",
+        "subjects": [
+            "Maths",
+            "Physics"
+        ],
+        "hobbies": [
+            "Sports",
+            "Reading"
+        ],
+        "picture": "test-data/sample.png",
+        "address": "221 Baker Street, London",
+        "state": "NCR",
+        "city": "Delhi"
+    },
+    {
+        "firstName": "John",
+        "lastName": "David",
+        "email": "john.david@test.com",
+        "gender": "Male",
+        "mobile": "9876543211",
+        "day": "20",
+        "month": "June",
+        "year": "1995",
+        "subjects": [
+            "Computer Science"
+        ],
+        "hobbies": [
+            "Music"
+        ],
+        "picture": "test-data/sample.png",
+        "address": "Manchester",
+        "state": "Uttar Pradesh",
+        "city": "Lucknow"
+    },
+    {
+        "firstName": "Emma",
+        "lastName": "Watson",
+        "email": "emma.watson@test.com",
+        "gender": "Female",
+        "mobile": "9876543212",
+        "day": "08",
+        "month": "August",
+        "year": "1998",
+        "subjects": [
+            "English",
+            "Chemistry"
+        ],
+        "hobbies": [
+            "Reading",
+            "Music"
+        ],
+        "picture": "test-data/sample.png",
+        "address": "Birmingham",
+        "state": "Haryana",
+        "city": "Panipat"
+    }
+]
